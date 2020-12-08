@@ -8,7 +8,7 @@ def execute_translate():
     result_list.delete(0,END)
     output = translate(word_field.get())
     
-    result_list.insert(1, type(output))
+    result_list.insert(1, output)
 
 
 window=Tk()
