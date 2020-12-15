@@ -1,14 +1,16 @@
 from tkinter import *
 from backend import *
 from tkinter import scrolledtext
+from tkinter import messagebox
 def execute_translate():
     """
     
     """
     #result_list.delete(0,END)
-
+    
     output = translate(word_field.get())
     newbx.configure(state="normal")
+    newbx.delete("1.0",END)
     #result_list.insert(1, output)
     #newbx.delete(0,END)
     newbx.insert(INSERT,output)
@@ -57,4 +59,6 @@ newbx = text_area = scrolledtext.ScrolledText(window,
                                       height = 10, state = "disabled") 
   
 text_area.grid(row = 6,column = 0, pady = 10, padx = 10,columnspan=7) 
+
+#messagebox.askquestion(title="info", message="bqa")
 window.mainloop()
